@@ -45,6 +45,23 @@ const fns = {
     },
     split_with_is: (value, data) => {
         return data.split_with === value;
+    },
+    array_union: (A, B) => {
+        return [...new Set([...A, ...B])];
+    },
+    array_intersect: (A, B) => {
+        const setA = new Set(A);
+        const setB = new Set(B);
+
+        let intersection = [];
+
+        for (let i of setB) {
+            if (setA.has(i)) {
+                intersection.push(i);
+            }
+        }
+
+        return intersection;
     }
 }
 
