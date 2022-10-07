@@ -1,0 +1,7 @@
+{
+    "filter_instructions": [
+        ["and", ["amount_le", 1000], ["name_includes", "Pepper"]],
+        ["or", ["name_includes", "Wine"], ["name_includes", "Nut"]],
+        ["and", ["and", ["before_date", "01-01-2022"], ["after_date", "12-01-2021"]], ["amount_le", 2000]]
+    ]
+}
